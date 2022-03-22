@@ -8,24 +8,6 @@ const ALL_EXPENSES = localStorage.getItem("expenses")
   ? JSON.parse(localStorage.getItem("expenses"))
   : [];
 
-// const All_EXPENSES = [
-//   {
-//     id: 1,
-//     name: "Buy a book",
-//     amount: 20,
-//   },
-//   {
-//     id: 2,
-//     name: "Buy milk",
-//     amount: 5,
-//   },
-//   {
-//     id: 3,
-//     name: "Buy flight ticket",
-//     amount: 300,
-//   },
-// ];
-
 function App() {
   const [expenses, setExpenses] = useState(ALL_EXPENSES);
   const [name, setName] = useState("");
