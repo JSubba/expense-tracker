@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container } from "reactstrap";
-import Logo from "./images/logo.png";
+import "animate.css";
+import Icon from "./images/icon.jpg";
 import Form from "./components/Form";
 import List from "./components/List";
 
@@ -45,11 +46,11 @@ function App() {
 
   return (
     <Container className="text-center">
-      <div className="mt-4 p-5 bg-primary text-white rounded">
+      <div className="jumbotron text-white">
         <h3 className="display-6">
           Track Your Expenses
           <img
-            src={Logo}
+            src={Icon}
             style={{ width: 50, height: 50 }}
             className="mx-2"
             alt="logo image"

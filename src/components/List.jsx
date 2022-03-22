@@ -1,13 +1,12 @@
-import { Button } from "bootstrap";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 const List = ({ expenses }) => {
   return (
-    <div>
-      <ListGroup className="d-flex">
-        {expenses.map((item, index) => (
-          <ListGroupItem key={index}>
-            {item.name} $&nbsp;{item.amount}
+    <div className="list pt-4 mb-5">
+      <ListGroup>
+        {expenses.map((item) => (
+          <ListGroupItem key={item.id} className="my-1 rounded">
+            {item.name} - $ {item.amount}
           </ListGroupItem>
         ))}
       </ListGroup>

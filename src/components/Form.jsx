@@ -1,8 +1,8 @@
 import {
   Form as BTForm,
   FormGroup,
-  Input,
   Label,
+  Input,
   Col,
   Button,
 } from "reactstrap";
@@ -17,43 +17,40 @@ const Form = ({
 }) => {
   return (
     <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
-      <FormGroup className="row d-flex justify-content-center">
-        {/* <Label for="exampleEmail" sm={4}>
-          Name of Expense
-        </Label> */}
-        <Col sm={4} className="d-flex justify-content-center">
-          <h4>Name</h4>
+      <FormGroup className="row">
+        <Label>Name of Expense</Label>
+        <Col className="col-12 col-md-8 w-100 mx-auto">
           <Input
             type="text"
             name="name"
             id="expenseName"
             placeholder="Name of expense?"
+            className="p-3"
             value={name}
             onChange={handleName}
           />
         </Col>
       </FormGroup>
-      <FormGroup className="row d-flex justify-content-center">
-        <Label for="exampleEmail" sm={4}>
-          $Amount
-        </Label>
-        <Col sm={4}>
+      <FormGroup className="row">
+        <Label>$Amount</Label>
+        <Col className="col-12 col-md-8 w-100 mx-auto">
           <Input
             type="number"
             name="amount"
             id="expenseAmount"
             placeholder="0.00"
+            className="p-3"
             value={amount}
             onChange={handleAmount}
           />
         </Col>
       </FormGroup>
-      <Button type="submit" className="btn btn-warning my-2 px-4">
+      <Button type="submit" className="btn add-btn btn-lg m-1 px-4">
         Add
-      </Button>{" "}
+      </Button>
       <Button
         type="submit"
-        className="btn btn-danger my2 px-4"
+        className="btn delete-btn btn-lg m-1 px-4"
         onClick={handleClearExpenses}
       >
         Delete
