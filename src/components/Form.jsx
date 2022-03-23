@@ -10,50 +10,64 @@ import {
 const Form = ({
   name,
   amount,
+  date,
   handleName,
   handleAmount,
+  handleDate,
   handleSubmitForm,
-  handleClearExpenses,
+  handleDeleteAllExpenses,
 }) => {
   return (
     <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
       <FormGroup className="row">
-        <Label>Name of Expense</Label>
-        <Col className="col-12 col-md-8 w-100 mx-auto">
+        <Label>Fill and press Add</Label>
+        <Col className="w-100 mx-auto">
           <Input
             type="text"
             name="name"
             id="expenseName"
-            placeholder="Name of expense?"
-            className="p-3"
+            placeholder="Name"
+            className="p-2"
             value={name}
             onChange={handleName}
           />
         </Col>
       </FormGroup>
       <FormGroup className="row">
-        <Label>$Amount</Label>
-        <Col className="col-12 col-md-8 w-100 mx-auto">
+        <Col className="w-100 pb-2 mx-auto">
+          <Input
+            type="date"
+            name="date"
+            id="expenseDate"
+            placeholder="Date"
+            className="p-2"
+            value={date}
+            onChange={handleDate}
+          />
+        </Col>
+      </FormGroup>
+      <FormGroup className="row">
+        <Col className="w-100 pb-2 mx-auto">
           <Input
             type="number"
             name="amount"
             id="expenseAmount"
-            placeholder="0.00"
-            className="p-3"
+            placeholder="Amount"
+            className="p-2"
             value={amount}
             onChange={handleAmount}
           />
         </Col>
       </FormGroup>
-      <Button type="submit" className="btn add-btn btn-lg m-1 px-4">
+      <Button type="submit" className="btn add-btn m-1 px-4">
         Add
       </Button>
       <Button
         type="submit"
-        className="btn delete-btn btn-lg m-1 px-4"
-        onClick={handleClearExpenses}
+        className="btn delete-btn m-1 px-4"
+        onClick={handleDeleteAllExpenses}
       >
-        Delete
+        Delete All
       </Button>
     </BTForm>
   );
